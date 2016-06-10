@@ -1,2 +1,2 @@
 # hello-world
-My first repo
+My first repository containing all my code, including Python
