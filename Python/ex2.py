@@ -16,3 +16,4 @@ print "We need to put about", average_passengers_per_car, "in each car."
 print "Hello I have %d cars in my garage" % cars 
 print "What is going on? Here we have at least", cars - drivers, "!"
 print "Whasdfkasdf "
+print “hello”
