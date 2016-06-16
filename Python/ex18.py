@@ -15,7 +15,7 @@ def print_one(arg1):
 
 # this one takes no arguments
 def print_none():
-	print "I got nothin' ."
+	print "I got nothin' :( ."
 	print_two("Jasdf", "asdf")
 
 print_two("Zed", "Shaw")
