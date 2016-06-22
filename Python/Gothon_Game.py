@@ -53,29 +53,32 @@ Armory and about to pull a weapon to blast you.
 		"""
 		action = raw_input(lkj)
 
-		if "shoot!" in action:
+		if "shoot" in action:
 			print "Quick on the draw you yank out your blaster and fire it at the Gothon." 
 			print "His clown costume is flowing and moving around his body, which throws" 
 			print "off your aim. Your laser hits his costume but misses him entirely. This" 
 			print "completely ruins his brand new costume his mother bought him, which"
 			print "makes him fly into a rage and blast you repeatedly in the face until" 
 			print "you are dead. Then he eats you."
+			print "\n"
 			return 'death'
-		elif "dodge!" in action:
+		elif "dodge" in action:
 			print "Like a world class boxer you dodge, weave, slip and slide right"
 			print "as the Gothon's blaster cranks a laser past your head."
 			print "In the middle of your artful dodge your foot slips and you"
 			print "bang your head on the metal wall and pass out."
 			print "You wake up shortly after only to die as the Gothon stomps on"
 			print "your head and eats you."
+			print "\n"
 			return 'death'
-		elif "tell a joke" in action:
+		elif "tell" or "joke" in action:
 			print "Lucky for you they made you learn Gothon insults in the academy."
  			print "You tell the one Gothon joke you know:"
 			print "Lbhe zbgure vf fb sng, jura fur fvgf nebhaq gur ubhfr, fur fvgf nebhaq gur ubhfr."
  			print "The Gothon stops, tries not to laugh, then busts out laughing and can't move."
  			print "While he's laughing you run up and shoot him square in the head"
  			print "putting him down, then jump through the Weapon Armory door."
+ 			print "\n"
  			return 'laser_weapon_armory'
  		else:
  			print "DOES NOT COMPUTE!"
@@ -85,7 +88,7 @@ class LaserWeaponArmory(Scene):
 
 	def enter(self):
 		print "You do a dive roll into the Weapon Armory, crouch and scan the room" 
-		print"formoreGothonsthatmightbehiding. It'sdeadquiet,tooquiet." 
+		print "for more Gothons that might be hiding. It's quiet, too quiet." 
 		print "You stand up and run to the far side of the room and find the" 
 		print "neutron bomb in its container. There's a keypad lock on the box" 
 		print "and you need the code to get the bomb out. If you get the code" 
@@ -104,12 +107,14 @@ class LaserWeaponArmory(Scene):
 			print "The container clicks open and the seal breaks, letting gas out." 
 			print "You grab the neutron bomb and run as fast as you can to the" 
 			print "bridge where you must place it in the right spot."
+			print "\n"
 			return 'the_bridge'
 		else:
 			print "The lock buzzes one last time and then you hear a sickening"
  			print "melting sound as the mechanism is fused together."
 			print "You decide to sit there, and finally the Gothons blow up the"
  			print "ship from their ship and you die."
+ 			print "\n"
 			return 'death' 
 
 class TheBridge(Scene):
@@ -121,10 +126,12 @@ class TheBridge(Scene):
  		print "clown costume than the last. They haven't pulled their"
  		print "weapons out yet, as they see the active bomb under your"
 		print "arm and don't want to set it off."
+		print "\n"
+		print "Do you throw the bomb at them or do you slowly place the bomb down"
 
  		action = raw_input("> ") 
  		
- 		if action == "throw the bomb":
+ 		if "throw" in action:
  			print "In a panic you throw the bomb at the group of Gothons"
  			print "and make a leap for the door. Right as you drop it a"
  			print "Gothon shoots you right in the back killing you."
@@ -133,7 +140,7 @@ class TheBridge(Scene):
  			print "it goes off."
  			return 'death'
 
- 		elif action == "slowly place the bomb":
+ 		elif "place" in action:
  			print "You point your blaster at the bomb under your arm"
  			print "and the Gothons put their hands up and start to sweat."
  			print "You inch backward to the door, open it, and then carefully"
@@ -155,10 +162,10 @@ class EscapePod(Scene):
  		print "hardly any Gothons are on the ship, so your run is clear of"
  		print "interference. You get to the chamber with the escape pods, and"
  		print "now need to pick one to take. Some of them could be damaged"
- 		print "but you don't have time to look. There's 5 pods, which one"
- 		print "do you take?"
+ 		print "but you don't have time to look. "
+ 		print "There's 3 pods, which one do you take?"
 
- 		good_pod = randint(1,5)
+ 		good_pod = randint(1, 3)
  		guess = raw_input("[pod #]> ")
 
  		if int(guess) != good_pod:
