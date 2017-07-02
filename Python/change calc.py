@@ -1,7 +1,6 @@
 def calculate_change(cost, paid):
 	change = float(paid) - float(cost)
 	print "-" * 10
-	print "(All prices are in HKD)"
 	print "You should receive $%.2f" % change
 	print "-" * 10
 	ten_notes = change * 0.1
@@ -23,7 +22,6 @@ def calculate_change(cost, paid):
 		two_coins = five_two_diff * 0.5
 		print "$2 coins: %d" % two_coins
 		two_one_diff = five_two_diff - int(two_coins) * 2
-		#one_coins = two_one_diff 
 		print "$1 coins: %d" % two_one_diff
 
 calculate_change(
