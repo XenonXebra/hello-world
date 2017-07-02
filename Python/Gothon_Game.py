@@ -1,8 +1,6 @@
 from sys import exit
 from random import randint
 
-lkj = "> "
-
 class Scene(object):
 
 	def enter(self):
@@ -51,7 +49,7 @@ flowing around his hate filled body. He's blocking the door to the
 Armory and about to pull a weapon to blast you.
 		\nDo you shoot back at the Gothon, dodge his blast or try and tell him a joke?
 		"""
-		action = raw_input(lkj)
+		action = raw_input("> ")
 
 		if "shoot" in action:
 			print "Quick on the draw you yank out your blaster and fire it at the Gothon." 
